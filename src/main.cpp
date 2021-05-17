@@ -22,6 +22,7 @@
 #ifdef LUA_SCRIPTS
 #include "./apps/main/luaapp.h"
 #endif
+#include "./apps/main/dino_game.h"
 #include "./apps/main/stopwatch.h"
 #include "./apps/main/switcher.h"
 #include "./apps/main/watchface.h"
@@ -112,6 +113,7 @@ void setup() {
   mainAppSwitcher->registerApp(new OswAppWaterLevel());
   mainAppSwitcher->registerApp(new OswAppTimeConfig());
   mainAppSwitcher->registerApp(new OswAppConfigMgmt());
+  mainAppSwitcher->registerApp(new OswAppDinoGame());
 #ifdef LUA_SCRIPTS
   mainAppSwitcher->registerApp(new OswLuaApp("stopwatch.lua"));
 #endif
